@@ -6,7 +6,7 @@ class LightifyPlugZigBee extends ZigBeeDevice {
 	onMeshInit() {
 
 		// Register onoff capability
-		this.registerCapability('onoff', 'genOnOff', {
+		this.registerCapability('onoff', 'onOff', {
 			getOpts: {
 				pollInterval: 15000,
 			},
