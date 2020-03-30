@@ -1,6 +1,6 @@
 'use strict';
 
-const ZigBeeLightDevice = require('homey-meshdriver').ZigBeeLightDevice;
+const { ZigBeeLightDevice } = require('homey-zigbeedriver');
 
 class LightifyWhiteZigBee extends ZigBeeLightDevice {
 	get energyMap() {
