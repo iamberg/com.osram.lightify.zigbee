@@ -5,12 +5,12 @@
   "compatibility": ">=3.0.0",
   "category": "lights",
   "name": {
-    "en": "Osram Lightify (ZigBee)",
-    "nl": "Osram Lightify (ZigBee)"
+    "en": "Osram Lightify",
+    "nl": "Osram Lightify"
   },
   "description": {
-    "en": "Control your Osram Lightify bulbs (ZigBee) with Homey!",
-    "nl": "Gebruik je Osram Lightify lampen (ZigBee) met Homey!"
+    "en": "Brighten up your smart home with the Zigbee lighting solutions from Osram Lightify",
+    "nl": "Verlicht je huis slimmer met de Zigbee lampen van Osram Lightify"
   },
   "author": {
     "name": "Athom B.V."
