@@ -138,25 +138,7 @@
           }
         }
       },
-      "settings": [
-        {
-          "id": "transition_time",
-          "type": "number",
-          "label": {
-            "en": "Transition Time",
-            "nl": "Overgangstijd"
-          },
-          "hint": {
-            "en": "This setting determines the time in seconds it takes to dim from one level to another.",
-            "nl": "Deze instelling bepaalt de duur in seconden van het dimmen van een niveau naar een ander."
-          },
-          "value": 1,
-          "attr": {
-            "min": 0,
-            "max": 6553
-          }
-        }
-      ]
+      "settings": []
     },
     {
       "id": "lightify_rgbw_gu10",
@@ -229,25 +211,7 @@
           }
         }
       },
-      "settings": [
-        {
-          "id": "transition_time",
-          "type": "number",
-          "label": {
-            "en": "Transition Time",
-            "nl": "Overgangstijd"
-          },
-          "hint": {
-            "en": "This setting determines the time in seconds it takes to dim from one level to another.",
-            "nl": "Deze instelling bepaalt de duur in seconden van het dimmen van een niveau naar een ander."
-          },
-          "value": 1,
-          "attr": {
-            "min": 0,
-            "max": 6553
-          }
-        }
-      ]
+      "settings": []
     },
     {
       "id": "lightify_gardenpole_rgbw",
@@ -317,25 +281,7 @@
           }
         }
       },
-      "settings": [
-        {
-          "id": "transition_time",
-          "type": "number",
-          "label": {
-            "en": "Transition Time",
-            "nl": "Overgangstijd"
-          },
-          "hint": {
-            "en": "This setting determines the time in seconds it takes to dim from one level to another.",
-            "nl": "Deze instelling bepaalt de duur in seconden van het dimmen van een niveau naar een ander."
-          },
-          "value": 1,
-          "attr": {
-            "min": 0,
-            "max": 6553
-          }
-        }
-      ]
+      "settings": []
     },
     {
       "id": "lightify_gardenpole_mini_rgbw",
@@ -404,25 +350,7 @@
           }
         }
       },
-      "settings": [
-        {
-          "id": "transition_time",
-          "type": "number",
-          "label": {
-            "en": "Transition Time",
-            "nl": "Overgangstijd"
-          },
-          "hint": {
-            "en": "This setting determines the time in seconds it takes to dim from one level to another.",
-            "nl": "Deze instelling bepaalt de duur in seconden van het dimmen van een niveau naar een ander."
-          },
-          "value": 1,
-          "attr": {
-            "min": 0,
-            "max": 6553
-          }
-        }
-      ]
+      "settings": []
     },
     {
       "id": "lightify_gardenspot_mini_rgb",
@@ -491,25 +419,7 @@
           }
         }
       },
-      "settings": [
-        {
-          "id": "transition_time",
-          "type": "number",
-          "label": {
-            "en": "Transition Time",
-            "nl": "Overgangstijd"
-          },
-          "hint": {
-            "en": "This setting determines the time in seconds it takes to dim from one level to another.",
-            "nl": "Deze instelling bepaalt de duur in seconden van het dimmen van een niveau naar een ander."
-          },
-          "value": 1,
-          "attr": {
-            "min": 0,
-            "max": 6553
-          }
-        }
-      ]
+      "settings": []
     },
     {
       "id": "lightify_flex_rgbw",
@@ -580,25 +490,7 @@
           }
         }
       },
-      "settings": [
-        {
-          "id": "transition_time",
-          "type": "number",
-          "label": {
-            "en": "Transition Time",
-            "nl": "Overgangstijd"
-          },
-          "hint": {
-            "en": "This setting determines the time in seconds it takes to dim from one level to another.",
-            "nl": "Deze instelling bepaalt de duur in seconden van het dimmen van een niveau naar een ander."
-          },
-          "value": 1,
-          "attr": {
-            "min": 0,
-            "max": 6553
-          }
-        }
-      ]
+      "settings": []
     },
     {
       "id": "lightify_white",
@@ -655,25 +547,7 @@
           }
         }
       },
-      "settings": [
-        {
-          "id": "transition_time",
-          "type": "number",
-          "label": {
-            "en": "Transition Time",
-            "nl": "Overgangstijd"
-          },
-          "hint": {
-            "en": "This setting determines the time in seconds it takes to dim from one level to another.",
-            "nl": "Deze instelling bepaalt de duur in seconden van het dimmen van een niveau naar een ander."
-          },
-          "value": 1,
-          "attr": {
-            "min": 0,
-            "max": 6553
-          }
-        }
-      ]
+      "settings": []
     },
     {
       "id": "lightify_white_e14",
@@ -727,25 +601,7 @@
           }
         }
       },
-      "settings": [
-        {
-          "id": "transition_time",
-          "type": "number",
-          "label": {
-            "en": "Transition Time",
-            "nl": "Overgangstijd"
-          },
-          "hint": {
-            "en": "This setting determines the time in seconds it takes to dim from one level to another.",
-            "nl": "Deze instelling bepaalt de duur in seconden van het dimmen van een niveau naar een ander."
-          },
-          "value": 1,
-          "attr": {
-            "min": 0,
-            "max": 6553
-          }
-        }
-      ]
+      "settings": []
     },
     {
       "id": "lightify_white_gu10",
@@ -799,25 +655,7 @@
           }
         }
       },
-      "settings": [
-        {
-          "id": "transition_time",
-          "type": "number",
-          "label": {
-            "en": "Transition Time",
-            "nl": "Overgangstijd"
-          },
-          "hint": {
-            "en": "This setting determines the time in seconds it takes to dim from one level to another.",
-            "nl": "Deze instelling bepaalt de duur in seconden van het dimmen van een niveau naar een ander."
-          },
-          "value": 1,
-          "attr": {
-            "min": 0,
-            "max": 6553
-          }
-        }
-      ]
+      "settings": []
     },
     {
       "id": "lightify_dimmable_white",
@@ -867,25 +705,7 @@
           }
         }
       },
-      "settings": [
-        {
-          "id": "transition_time",
-          "type": "number",
-          "label": {
-            "en": "Transition Time",
-            "nl": "Overgangstijd"
-          },
-          "hint": {
-            "en": "This setting determines the time in seconds it takes to dim from one level to another.",
-            "nl": "Deze instelling bepaalt de duur in seconden van het dimmen van een niveau naar een ander."
-          },
-          "value": 1,
-          "attr": {
-            "min": 0,
-            "max": 6553
-          }
-        }
-      ]
+      "settings": []
     }
   ],
   "flow": {}
