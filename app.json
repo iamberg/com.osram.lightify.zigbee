@@ -1,7 +1,7 @@
 {
   "id": "com.osram.lightify.zigbee",
   "version": "1.4.0",
-  "sdk": 2,
+  "sdk": 3,
   "compatibility": ">=5.0.0",
   "brandColor": "#FF6700",
   "category": "lights",
