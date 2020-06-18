@@ -1,1 +1,0 @@
-Laat je creativiteit de vrije loop en speel met verschillende soorten belichting in Flows. Creëer een feller licht voor als je staat te koken, of een warm gedimd licht als je zin hebt in een film avondje. Verbind je Osram Lightify lampen met Homey en zorg voor de perfecte stemming met de juiste belichting.
