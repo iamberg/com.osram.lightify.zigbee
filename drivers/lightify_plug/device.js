@@ -1,12 +1,14 @@
 'use strict';
 
-const ZigBeeDevice = require('homey-meshdriver').ZigBeeDevice;
+const { ZigBeeDevice } = require('homey-zigbeedriver');
+
+const { CLUSTER } = require('zigbee-clusters');
 
 class LightifyPlugZigBee extends ZigBeeDevice {
-	onMeshInit() {
+	onNodeInit() {
 
 		// Register onoff capability
-		this.registerCapability('onoff', 'genOnOff', {
+		this.registerCapability('onoff', CLUSTER.ON_OFF, {
 			getOpts: {
 				pollInterval: 15000,
 			},
