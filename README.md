@@ -3,6 +3,9 @@
 Control your Osram Lightify devices with Homey!
 
 #### Changelog
+1.3.1
+- Fixes Energy issue
+
 1.3.0
 - Added support for Energy
 
