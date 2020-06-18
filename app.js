@@ -1,7 +1,7 @@
 'use strict';
 
 const Homey = require('homey');
-const Log = require('homey-log').Log;
+// const { Log } = require('homey-log'); // TODO: re-enable when SDKv3 compatible
 
 // Enable zigbee-cluster logging
 const { Util } = require('homey-zigbeedriver');
