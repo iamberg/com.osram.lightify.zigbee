@@ -1,16 +1,17 @@
 {
   "id": "com.osram.lightify.zigbee",
-  "version": "1.2.4",
-  "sdk": 2,
-  "compatibility": ">=1.5.0",
+  "version": "1.4.3",
+  "sdk": 3,
+  "compatibility": ">=5.0.0",
+  "brandColor": "#FF6700",
   "category": "lights",
   "name": {
-    "en": "Osram Lightify (ZigBee)",
-    "nl": "Osram Lightify (ZigBee)"
+    "en": "Osram Lightify",
+    "nl": "Osram Lightify"
   },
   "description": {
-    "en": "Control your Osram Lightify bulbs (ZigBee) with Homey!",
-    "nl": "Gebruik je Osram Lightify lampen (ZigBee) met Homey!"
+    "en": "Brighten up your smart home with the Zigbee lighting solutions from Osram Lightify",
+    "nl": "Verlicht je huis slimmer met de Zigbee lampen van Osram Lightify"
   },
   "author": {
     "name": "Athom B.V."
@@ -27,7 +28,7 @@
     "large": "assets/images/large.png",
     "small": "assets/images/small.png"
   },
-    "drivers": [
+  "drivers": [
     {
       "id": "lightify_plug",
       "name": {
@@ -48,12 +49,19 @@
           "Plug 01",
           "Plug - LIGHTIFY"
         ],
-        "deviceId": 16,
-        "profileId": 49246,
+        "endpoints": {
+          "3": {
+            "clusters": [
+              0,
+              4,
+              6
+            ]
+          }
+        },
         "learnmode": {
           "instruction": {
-            "en": "Plug in the Plug, or toggle the Plug to start pairing.\n\nIf pairing does not automatically start, try turning the Plug on and off 6 times.",
-            "nl": "Stop de Plug in het stopcontact of zet de Plug uit en weer aan om hem toe te voegen.\n\nWordt de Plug niet automatisch toegevoegd, probeer hem dan 6 keer aan en uit te zetten."
+            "en": "Plug in the Plug, or toggle the Plug to start pairing.\n\nIf pairing does not automatically start, hold the on/off button until the Plug switches once.",
+            "nl": "Stop de Plug in het stopcontact of zet de Plug uit en weer aan om hem toe te voegen.\n\nWordt de Plug niet automatisch toegevoegd, houd dan de aan/uit knop ingedrukt totdat hij 1 keer schakelt."
           }
         }
       }
@@ -73,18 +81,56 @@
         "light_temperature",
         "light_mode"
       ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_hue": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_saturation": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_temperature": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "onoff": {
+          "setOnDim": false
+        }
+      },
       "images": {
         "large": "drivers/lightify_rgbw/assets/images/large.png",
         "small": "drivers/lightify_rgbw/assets/images/small.png"
       },
       "zigbee": {
-        "manufacturerName": "OSRAM",
+        "manufacturerName": [
+          "OSRAM",
+          "LEDVANCE"
+        ],
         "productId": [
           "Classic A60 RGBW",
-          "CLA60 RGBW OSRAM"
+          "CLA60 RGBW OSRAM",
+          "CLA60 RGBW Z3"
         ],
-        "deviceId": 528,
-        "profileId": 49246,
+        "endpoints": {
+          "3": {
+            "clusters": [
+              0,
+              4,
+              6,
+              8,
+              768
+            ]
+          }
+        },
         "learnmode": {
           "instruction": {
             "en": "Toggle the bulb to start pairing.\n\nIf pairing does not automatically start within 20 seconds, try resetting the device by toggling it 6 times (one toggle: 5 seconds off, 5 seconds on). It will flash to indicate it has been reset.",
@@ -92,25 +138,7 @@
           }
         }
       },
-      "settings": [
-        {
-          "id": "transition_time",
-          "type": "number",
-          "label": {
-            "en": "Transition Time",
-            "nl": "Overgangstijd"
-          },
-          "hint": {
-            "en": "This setting determines the time in seconds it takes to dim from one level to another.",
-            "nl": "Deze instelling bepaalt de duur in seconden van het dimmen van een niveau naar een ander."
-          },
-          "value": 1,
-          "attr": {
-            "min": 0,
-            "max": 6553
-          }
-        }
-      ]
+      "settings": []
     },
     {
       "id": "lightify_rgbw_gu10",
@@ -127,17 +155,55 @@
         "light_temperature",
         "light_mode"
       ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_hue": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_saturation": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_temperature": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "onoff": {
+          "setOnDim": false
+        }
+      },
       "images": {
         "large": "drivers/lightify_rgbw_gu10/assets/images/large.jpg",
         "small": "drivers/lightify_rgbw_gu10/assets/images/small.jpg"
       },
       "zigbee": {
-        "manufacturerName": "OSRAM",
-        "productId": [
-          "PAR 16 50 RGBW - LIGHTIFY"
+        "manufacturerName": [
+          "OSRAM",
+          "LEDVANCE"
         ],
-        "deviceId": 528,
-        "profileId": 49246,
+        "productId": [
+          "PAR 16 50 RGBW - LIGHTIFY",
+          "PAR16 RGBW Z3"
+        ],
+        "endpoints": {
+          "3": {
+            "clusters": [
+              0,
+              4,
+              6,
+              8,
+              768
+            ]
+          }
+        },
         "learnmode": {
           "instruction": {
             "en": "Toggle the spot to start pairing.\n\nIf pairing does not automatically start within 20 seconds, try resetting the device by toggling it 6 times (one toggle: 5 seconds off, 5 seconds on). It will flash to indicate it has been reset.",
@@ -145,25 +211,7 @@
           }
         }
       },
-      "settings": [
-        {
-          "id": "transition_time",
-          "type": "number",
-          "label": {
-            "en": "Transition Time",
-            "nl": "Overgangstijd"
-          },
-          "hint": {
-            "en": "This setting determines the time in seconds it takes to dim from one level to another.",
-            "nl": "Deze instelling bepaalt de duur in seconden van het dimmen van een niveau naar een ander."
-          },
-          "value": 1,
-          "attr": {
-            "min": 0,
-            "max": 6553
-          }
-        }
-      ]
+      "settings": []
     },
     {
       "id": "lightify_gardenpole_rgbw",
@@ -180,6 +228,31 @@
         "light_temperature",
         "light_mode"
       ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_hue": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_saturation": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_temperature": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "onoff": {
+          "setOnDim": false
+        }
+      },
       "images": {
         "large": "drivers/lightify_gardenpole_rgbw/assets/images/large.png",
         "small": "drivers/lightify_gardenpole_rgbw/assets/images/small.png"
@@ -187,10 +260,20 @@
       "zigbee": {
         "manufacturerName": "OSRAM",
         "productId": [
-          "Gardenpole RGBW-Lightify"
+          "Gardenpole RGBW-Lightify",
+          "Gardenpole Mini RGBW OSRAM"
         ],
-        "deviceId": 528,
-        "profileId": 49246,
+        "endpoints": {
+          "3": {
+            "clusters": [
+              0,
+              4,
+              6,
+              8,
+              768
+            ]
+          }
+        },
         "learnmode": {
           "instruction": {
             "en": "Toggle the Gardenpole RGBW to start pairing.\n\nIf pairing does not automatically start within 20 seconds, try resetting the device by toggling it 6 times (one toggle: 5 seconds off, 5 seconds on). It will flash to indicate it has been reset.",
@@ -198,25 +281,7 @@
           }
         }
       },
-      "settings": [
-        {
-          "id": "transition_time",
-          "type": "number",
-          "label": {
-            "en": "Transition Time",
-            "nl": "Overgangstijd"
-          },
-          "hint": {
-            "en": "This setting determines the time in seconds it takes to dim from one level to another.",
-            "nl": "Deze instelling bepaalt de duur in seconden van het dimmen van een niveau naar een ander."
-          },
-          "value": 1,
-          "attr": {
-            "min": 0,
-            "max": 6553
-          }
-        }
-      ]
+      "settings": []
     },
     {
       "id": "lightify_gardenpole_mini_rgbw",
@@ -233,6 +298,31 @@
         "light_temperature",
         "light_mode"
       ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_hue": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_saturation": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_temperature": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "onoff": {
+          "setOnDim": false
+        }
+      },
       "images": {
         "large": "drivers/lightify_gardenpole_mini_rgbw/assets/images/large.png",
         "small": "drivers/lightify_gardenpole_mini_rgbw/assets/images/small.png"
@@ -242,8 +332,17 @@
         "productId": [
           "Gardenpole Mini RGBW-Lightify"
         ],
-        "deviceId": 528,
-        "profileId": 49246,
+        "endpoints": {
+          "3": {
+            "clusters": [
+              0,
+              4,
+              6,
+              8,
+              768
+            ]
+          }
+        },
         "learnmode": {
           "instruction": {
             "en": "Toggle the Gardenpole Mini RGBW to start pairing.\n\nIf pairing does not automatically start within 20 seconds, try resetting the device by toggling it 6 times (one toggle: 5 seconds off, 5 seconds on). It will flash to indicate it has been reset.",
@@ -251,25 +350,7 @@
           }
         }
       },
-      "settings": [
-        {
-          "id": "transition_time",
-          "type": "number",
-          "label": {
-            "en": "Transition Time",
-            "nl": "Overgangstijd"
-          },
-          "hint": {
-            "en": "This setting determines the time in seconds it takes to dim from one level to another.",
-            "nl": "Deze instelling bepaalt de duur in seconden van het dimmen van een niveau naar een ander."
-          },
-          "value": 1,
-          "attr": {
-            "min": 0,
-            "max": 6553
-          }
-        }
-      ]
+      "settings": []
     },
     {
       "id": "lightify_gardenspot_mini_rgb",
@@ -286,6 +367,31 @@
         "light_temperature",
         "light_mode"
       ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_hue": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_saturation": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_temperature": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "onoff": {
+          "setOnDim": false
+        }
+      },
       "images": {
         "large": "drivers/lightify_gardenspot_mini_rgb/assets/images/large.jpg",
         "small": "drivers/lightify_gardenspot_mini_rgb/assets/images/small.jpg"
@@ -295,8 +401,17 @@
         "productId": [
           "Gardenspot RGB"
         ],
-        "deviceId": 512,
-        "profileId": 49246,
+        "endpoints": {
+          "3": {
+            "clusters": [
+              0,
+              4,
+              6,
+              8,
+              768
+            ]
+          }
+        },
         "learnmode": {
           "instruction": {
             "en": "Toggle the gardenspots to start pairing.\n\nIf pairing does not automatically start within 20 seconds, try resetting the device by toggling it 6 times (one toggle: 5 seconds off, 5 seconds on). It will flash to indicate it has been reset.",
@@ -304,25 +419,7 @@
           }
         }
       },
-      "settings": [
-        {
-          "id": "transition_time",
-          "type": "number",
-          "label": {
-            "en": "Transition Time",
-            "nl": "Overgangstijd"
-          },
-          "hint": {
-            "en": "This setting determines the time in seconds it takes to dim from one level to another.",
-            "nl": "Deze instelling bepaalt de duur in seconden van het dimmen van een niveau naar een ander."
-          },
-          "value": 1,
-          "attr": {
-            "min": 0,
-            "max": 6553
-          }
-        }
-      ]
+      "settings": []
     },
     {
       "id": "lightify_flex_rgbw",
@@ -339,6 +436,31 @@
         "light_temperature",
         "light_mode"
       ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_hue": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_saturation": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_temperature": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "onoff": {
+          "setOnDim": false
+        }
+      },
       "images": {
         "large": "drivers/lightify_flex_rgbw/assets/images/large.png",
         "small": "drivers/lightify_flex_rgbw/assets/images/small.png"
@@ -350,8 +472,17 @@
           "LIGHTIFY Indoor Flex RGBW",
           "LIGHTIFY Outdoor Flex RGBW"
         ],
-        "deviceId": 528,
-        "profileId": 49246,
+        "endpoints": {
+          "3": {
+            "clusters": [
+              0,
+              4,
+              6,
+              8,
+              768
+            ]
+          }
+        },
         "learnmode": {
           "instruction": {
             "en": "Toggle the Flex RGBW to start pairing.\n\nIf pairing does not automatically start within 20 seconds, try resetting the device by toggling it 6 times (one toggle: 5 seconds off, 5 seconds on). It will flash to indicate it has been reset.",
@@ -359,25 +490,7 @@
           }
         }
       },
-      "settings": [
-        {
-          "id": "transition_time",
-          "type": "number",
-          "label": {
-            "en": "Transition Time",
-            "nl": "Overgangstijd"
-          },
-          "hint": {
-            "en": "This setting determines the time in seconds it takes to dim from one level to another.",
-            "nl": "Deze instelling bepaalt de duur in seconden van het dimmen van een niveau naar een ander."
-          },
-          "value": 1,
-          "attr": {
-            "min": 0,
-            "max": 6553
-          }
-        }
-      ]
+      "settings": []
     },
     {
       "id": "lightify_white",
@@ -391,6 +504,21 @@
         "dim",
         "light_temperature"
       ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_temperature": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "onoff": {
+          "setOnDim": false
+        }
+      },
       "images": {
         "large": "drivers/lightify_white/assets/images/large.png",
         "small": "drivers/lightify_white/assets/images/small.png"
@@ -401,11 +529,17 @@
           "Classic A60 TW",
           "CLA60 TW OSRAM"
         ],
-        "deviceId": [
-          256,
-          544
-        ],
-        "profileId": 49246,
+        "endpoints": {
+          "3": {
+            "clusters": [
+              0,
+              4,
+              6,
+              8,
+              768
+            ]
+          }
+        },
         "learnmode": {
           "instruction": {
             "en": "Toggle the bulb to start pairing.\n\nIf pairing does not automatically start within 20 seconds, try resetting the device by toggling it 6 times (one toggle: 5 seconds off, 5 seconds on). It will flash to indicate it has been reset.",
@@ -413,25 +547,7 @@
           }
         }
       },
-      "settings": [
-        {
-          "id": "transition_time",
-          "type": "number",
-          "label": {
-            "en": "Transition Time",
-            "nl": "Overgangstijd"
-          },
-          "hint": {
-            "en": "This setting determines the time in seconds it takes to dim from one level to another.",
-            "nl": "Deze instelling bepaalt de duur in seconden van het dimmen van een niveau naar een ander."
-          },
-          "value": 1,
-          "attr": {
-            "min": 0,
-            "max": 6553
-          }
-        }
-      ]
+      "settings": []
     },
     {
       "id": "lightify_white_e14",
@@ -445,6 +561,21 @@
         "dim",
         "light_temperature"
       ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_temperature": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "onoff": {
+          "setOnDim": false
+        }
+      },
       "images": {
         "large": "drivers/lightify_white_e14/assets/images/large.jpg",
         "small": "drivers/lightify_white_e14/assets/images/small.jpg"
@@ -452,8 +583,17 @@
       "zigbee": {
         "manufacturerName": "OSRAM",
         "productId": "Classic B40 TW - LIGHTIFY",
-        "deviceId": 544,
-        "profileId": 49246,
+        "endpoints": {
+          "3": {
+            "clusters": [
+              0,
+              4,
+              6,
+              8,
+              768
+            ]
+          }
+        },
         "learnmode": {
           "instruction": {
             "en": "Toggle the bulb to start pairing.\n\nIf pairing does not automatically start within 20 seconds, try resetting the device by toggling it 6 times (one toggle: 5 seconds off, 5 seconds on). It will flash to indicate it has been reset.",
@@ -461,25 +601,7 @@
           }
         }
       },
-      "settings": [
-        {
-          "id": "transition_time",
-          "type": "number",
-          "label": {
-            "en": "Transition Time",
-            "nl": "Overgangstijd"
-          },
-          "hint": {
-            "en": "This setting determines the time in seconds it takes to dim from one level to another.",
-            "nl": "Deze instelling bepaalt de duur in seconden van het dimmen van een niveau naar een ander."
-          },
-          "value": 1,
-          "attr": {
-            "min": 0,
-            "max": 6553
-          }
-        }
-      ]
+      "settings": []
     },
     {
       "id": "lightify_white_gu10",
@@ -493,6 +615,21 @@
         "dim",
         "light_temperature"
       ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_temperature": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "onoff": {
+          "setOnDim": false
+        }
+      },
       "images": {
         "large": "drivers/lightify_white_gu10/assets/images/large.jpg",
         "small": "drivers/lightify_white_gu10/assets/images/small.jpg"
@@ -500,8 +637,17 @@
       "zigbee": {
         "manufacturerName": "OSRAM",
         "productId": "PAR16 50 TW",
-        "deviceId": 544,
-        "profileId": 49246,
+        "endpoints": {
+          "3": {
+            "clusters": [
+              0,
+              4,
+              6,
+              8,
+              768
+            ]
+          }
+        },
         "learnmode": {
           "instruction": {
             "en": "Toggle the spot to start pairing.\n\nIf pairing does not automatically start within 20 seconds, try resetting the device by toggling it 6 times (one toggle: 5 seconds off, 5 seconds on). It will flash to indicate it has been reset.",
@@ -509,25 +655,7 @@
           }
         }
       },
-      "settings": [
-        {
-          "id": "transition_time",
-          "type": "number",
-          "label": {
-            "en": "Transition Time",
-            "nl": "Overgangstijd"
-          },
-          "hint": {
-            "en": "This setting determines the time in seconds it takes to dim from one level to another.",
-            "nl": "Deze instelling bepaalt de duur in seconden van het dimmen van een niveau naar een ander."
-          },
-          "value": 1,
-          "attr": {
-            "min": 0,
-            "max": 6553
-          }
-        }
-      ]
+      "settings": []
     },
     {
       "id": "lightify_dimmable_white",
@@ -540,6 +668,16 @@
         "onoff",
         "dim"
       ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "onoff": {
+          "setOnDim": false
+        }
+      },
       "images": {
         "large": "drivers/lightify_dimmable_white/assets/images/large.png",
         "small": "drivers/lightify_dimmable_white/assets/images/small.png"
@@ -547,12 +685,19 @@
       "zigbee": {
         "manufacturerName": "OSRAM",
         "productId": [
+          "Classic A60 W clear - LIGHTYFY",
           "Classic A60 W clear - LIGHTIFY"
         ],
-        "deviceId": [
-          256
-        ],
-        "profileId": 49246,
+        "endpoints": {
+          "3": {
+            "clusters": [
+              0,
+              4,
+              6,
+              8
+            ]
+          }
+        },
         "learnmode": {
           "instruction": {
             "en": "Toggle the bulb to start pairing.\n\nIf pairing does not automatically start within 20 seconds, try resetting the device by toggling it 6 times (one toggle: 5 seconds off, 5 seconds on). It will flash to indicate it has been reset.",
@@ -560,25 +705,7 @@
           }
         }
       },
-      "settings": [
-        {
-          "id": "transition_time",
-          "type": "number",
-          "label": {
-            "en": "Transition Time",
-            "nl": "Overgangstijd"
-          },
-          "hint": {
-            "en": "This setting determines the time in seconds it takes to dim from one level to another.",
-            "nl": "Deze instelling bepaalt de duur in seconden van het dimmen van een niveau naar een ander."
-          },
-          "value": 1,
-          "attr": {
-            "min": 0,
-            "max": 6553
-          }
-        }
-      ]
+      "settings": []
     }
   ],
   "flow": {}

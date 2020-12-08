@@ -1,0 +1,14 @@
+{
+  "1.4.0": {
+    "en": "Update to latest version of Homey Apps SDK."
+  },
+  "1.4.1": {
+    "en": "Updated to the latest version of the Homey Apps SDK and implemented various bug fixes and improvements."
+  },
+  "1.4.2": {
+    "en": "Updated to the latest version of the Homey Apps SDK and implemented various bug fixes and improvements."
+  },
+  "1.4.3": {
+    "en": "Updated to the latest version of the Homey Apps SDK, changed the way color temperature is calculated and implemented various bug fixes and improvements."
+  }
+}
